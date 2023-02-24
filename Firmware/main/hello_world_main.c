@@ -15,7 +15,7 @@ static const char *TAG = "example";
 void app_main(void)
 {
     printf("Hello world!\n");
-    ESP_LOGI(TAG,"EXAMPLE OF ESP_LOGI");
+    ESP_LOGI(TAG,"EXAMPLE OF ESP_LOGI BRANCH HUMEDAD");
     /* Print chip information */
     esp_chip_info_t chip_info;
     uint32_t flash_size;
