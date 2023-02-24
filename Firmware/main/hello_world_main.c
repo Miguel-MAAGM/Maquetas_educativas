@@ -10,11 +10,12 @@
 #include "freertos/task.h"
 #include "esp_chip_info.h"
 #include "esp_flash.h"
-
+#include "esp_log.h"
+static const char *TAG = "example";
 void app_main(void)
 {
     printf("Hello world!\n");
-
+    ESP_LOGI(TAG,"EXAMPLE OF ESP_LOGI");
     /* Print chip information */
     esp_chip_info_t chip_info;
     uint32_t flash_size;
@@ -32,7 +33,7 @@ void app_main(void)
         printf("Get flash size failed");
         return;
     }
-
+    
     printf("%uMB %s flash\n", flash_size / (1024 * 1024),
            (chip_info.features & CHIP_FEATURE_EMB_FLASH) ? "embedded" : "external");
 
